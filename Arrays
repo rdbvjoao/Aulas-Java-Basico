@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+	   //Criação do array
+	   //Boa prática declarar o tipo do array e depois colocar os colchetes
+	    double [] temperaturas = new double [5];
+	    
+	    temperaturas[0] = 31.3;
+	    temperaturas[1] = 32;
+	    temperaturas[2] = 33.7;
+	    temperaturas[3] = 34;
+	    temperaturas[4] = 33.1;
+
+        //System.out.println("O tamanho do array: "+ temperaturas.length); //.length mesma coisa do C# 
+        
+        for(int i = 0; i < temperaturas.length; i++) //Utilizando o FOR para iterar pelo array
+        {
+            System.out.println("Valor da temperatura do dia: " + (i+1) + " é: " + temperaturas[i]);
+        }
+	    
+	    
+	    //Um FOR melhorado, não consegue acesso ao indice e sim o valor
+	    for(double temp: temperaturas)
+	    {
+	        System.out.println(temp);
+	    }
+	}
+}
