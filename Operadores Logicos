@@ -1,37 +1,29 @@
 import java.util.Scanner;
 
-//Operadores lógicos
+//Operadores Lógicos
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-
-        int resultado = 1 + 2;
-        System.out.println(resultado);
-    
-        resultado = resultado - 1;
-        System.out.println(resultado);
-    
-        resultado = resultado * 2;
-        System.out.println(resultado);
+		int valor1 = 1;
+		int valor2 = 2;
+		
+		//No boolean é necessário ser utilizado em conjunto
+		boolean resultado1 = (valor1 == 1 ) && (valor2 == 2); //O && é o "e/AND"
+		System.out.println("valor1 é 1 AND valor2 é 2, resultado: "+ resultado1);
+		
+		boolean resultado2 = (valor1 == 1 ) || (valor2 == 2); //O || é o "ou/OR"
+		System.out.println("valor1 é 1 OR valor2 é 2, resultado: "+ resultado2);
+		
+		
+		//Tabela Verdade
+		boolean verdadeiro = true;
+		boolean falso = false;
+		
+		System.out.println(verdadeiro && falso);
+		System.out.println(verdadeiro || falso);
+		System.out.println(verdadeiro ^ falso);
+		System.out.println(!verdadeiro && falso);
         
-        resultado = resultado / 2;
-        System.out.println(resultado);
-        	  
-        resultado = resultado + 8;
-        System.out.println(resultado);
-        
-        resultado = resultado % 2;
-        System.out.println(resultado);
 	}
-
-	public static void ConcatenarString()
-	{
-	    String primeiraString = "Está é";
-	    String segundaString = " uma string concatenada";
-	    String terceiraString = primeiraString + segundaString;
-	    
-	    System.out.println(terceiraString);
-	}
-	
 }
