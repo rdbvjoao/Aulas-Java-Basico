@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+//Operadores Aritmeticos
+public class Main
+{
+	public static void main(String[] args)
+	{
+
+        int resultado = 1 + 2;
+        System.out.println(resultado);
+    
+        resultado = resultado - 1;
+        System.out.println(resultado);
+    
+        resultado = resultado * 2;
+        System.out.println(resultado);
+        
+        resultado = resultado / 2;
+        System.out.println(resultado);
+        	  
+        resultado = resultado + 8;
+        System.out.println(resultado);
+        
+        resultado = resultado % 2;
+        System.out.println(resultado);
+	}
+
+	public static void ConcatenarString()
+	{
+	    String primeiraString = "Está é";
+	    String segundaString = " uma string concatenada";
+	    String terceiraString = primeiraString + segundaString;
+	    
+	    System.out.println(terceiraString);
+	}
+	
+}
