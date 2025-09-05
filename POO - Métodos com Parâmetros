@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+//Classe e métodos com parametros
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Carro van = new Carro();
+		
+		van.marca = "Fiat";
+		van.modelo = "Ducato";
+		van.numPassageiros = 10;
+		van.capCombustivel = 100;
+		van.consumoCombustivel = 0.2;
+		
+		System.out.println(van.marca);
+		System.out.println(van.modelo);
+		
+		//invocando o método sem retorno/parâmetro
+		van.exibirAutonomia();
+		
+	    //invocando método com retorno
+		System.out.println("A autonomia do carro é = "+ van.obterAutonomia());
+		
+        double qtdCombustivel10 = van.calcularCombustivel(10);
+        double qtdCombustivel15 = van.calcularCombustivel(15);      
+        
+        System.out.println("\nqtdCombustivel10 = "+qtdCombustivel10);
+        System.out.println("\nqtdCombustivel15 = "+qtdCombustivel15);
+	}
+}
+
+class Carro
+{
+    String marca;
+    String modelo;
+    int numPassageiros;
+    double capCombustivel;
+    double consumoCombustivel;
+    
+    
+    void exibirAutonomia()//Método simples sem e/ou parâmetro
+    {
+        System.out.println("Autonomia do carro é: "+ capCombustivel*consumoCombustivel+" km");
+    }
+    
+    
+    double obterAutonomia() //Método com retorno
+    {
+        System.out.println("\nMétodo obterAutonomia invocado!");
+        
+        return capCombustivel * consumoCombustivel;
+    }
+    
+    //Método com parametro
+    double calcularCombustivel(double km) 
+    //Utiliza-se parametro quando o atribuito não está na classe
+    //não é preciso passar o consumoCombustivel como parametro pq ele já é da classe
+    {
+        double qtdCombustivel = km/consumoCombustivel;
+        
+        return qtdCombustivel;
+    }
+    
+}
