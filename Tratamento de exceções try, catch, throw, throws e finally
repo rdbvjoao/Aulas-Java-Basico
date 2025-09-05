@@ -1,0 +1,26 @@
+import java.util.Scanner;
+//Tratamento de exceções try, catch, throw, throws e finally
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+        try 
+        {
+            int [] vetor = new int [4];
+		
+		    System.out.println("Antes da exception");
+		
+		    vetor[4] = 1;
+		
+		    System.out.println("Esse texto não será impresso");	
+        }
+        
+        catch(ArrayIndexOutOfBoundsException exception)//Tipo do erro que foi dado no output
+        {
+            System.out.println("Exceção ao acessar um índice do vetor");	
+        }
+
+		    System.out.println("Após a exception será impresso esse texto");	
+	}
+}
