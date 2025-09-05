@@ -1,0 +1,74 @@
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Carro van = new Carro("Fiat","Ducato",10);
+		
+		System.out.println(van);
+	}
+}
+
+class Carro
+{
+    String marca;
+    String modelo;
+    int numPassageiros;
+    double capCombustivel;
+    double consumoCombustivel;
+    
+    //Construtor que recebe todos os parametros
+    //o this referência ao atributo da classe, fazendo que os atributos recebam os respectivos parametros 
+    public Carro(String marca, String modelo, int numPassageiros, double capCombustivel, double consumoCombustivel) //Construtor
+    {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numPassageiros = numPassageiros;
+        this.capCombustivel = capCombustivel;
+        this.consumoCombustivel = consumoCombustivel;
+    }
+    
+    public Carro() { } //Método construtor vazio
+    
+    public Carro(String marca, String modelo, int numPassageiros)//construtor com 3 parâmetros
+    {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.numPassageiros = numPassageiros;
+        
+        System.out.println("Invocando o construtor com 3 parâmetros");
+    }
+    
+    
+    public Carro (String marca, String modelo)//Construtor com 2 parâmetros
+    {
+        this(marca, modelo, 10);
+        
+        System.out.println("Invocando o construtor com 2 parâmetros");
+    }
+    
+    
+    void exibirAutonomia()//Método simples sem e/ou parâmetro
+    {
+        System.out.println("Autonomia do carro é: "+ capCombustivel*consumoCombustivel+" km");
+    }
+    
+    
+    double obterAutonomia() //Método com retorno
+    {
+        System.out.println("\nMétodo obterAutonomia invocado!");
+        
+        return capCombustivel * consumoCombustivel;
+    }
+    
+    //Método com parametro
+    double calcularCombustivel(double km) 
+    //Utiliza-se parametro quando o atribuito não está na classe
+    //não é preciso passar o consumoCombustivel como parametro pq ele já é da classe
+    {
+        double qtdCombustivel = km/consumoCombustivel;
+        
+        return qtdCombustivel;
+    }
+    
+    
+}
