@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class TesteCarro
+{
+	public static void main(String[] args) 
+	{
+		Carro van = new Carro();
+		Carro fusca = new Carro();
+		
+		van.marca = "Fiat";
+		van.modelo = "Ducato";
+		van.numPassageiros =3;
+		van.capacidade_comb = 10;
+		van.consumo_comb = 0.2;
+		
+		fusca.marca = "Volkswagen";
+		fusca.modelo = "Fusca";
+		fusca.numPassageiros = 5;
+		fusca.capacidade_comb = 4.6;
+		fusca.consumo_comb = 0.54;
+		
+		System.out.println(van.marca);
+		System.out.println(van.modelo);
+		System.out.println(van.numPassageiros);
+		System.out.println(van.capacidade_comb);
+		System.out.println(van.consumo_comb);
+		
+		System.out.println();
+		
+		System.out.println(fusca.marca);
+		System.out.println(fusca.modelo);
+		System.out.println(fusca.numPassageiros);
+		System.out.println(fusca.capacidade_comb);
+		System.out.println(fusca.consumo_comb);
+	}
+}
+
+class Carro //Atributos da classe para criar o objeto "Carro"
+{
+    String marca;
+    String modelo;
+    int numPassageiros;
+    double capacidade_comb;
+    double consumo_comb;
+    
+}
