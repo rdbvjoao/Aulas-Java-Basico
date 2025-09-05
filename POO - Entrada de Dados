@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        Livros[] livros = new Livros[2]; 
+
+        //Entrada de dados para cada livro
+        for (int i = 0; i < livros.length; i++) 
+        {
+
+            livros[i] = new Livros();          // Inicializa o objeto
+            livros[i].entrarDados(scan);       // Coleta os dados informados pelo Scanner
+            
+        }
+
+        System.out.println("\nInformações dos livros:");
+        for (int i = 0; i < livros.length; i++) 
+        {
+            System.out.println("\nLivro " + (i + 1) + ":");
+            livros[i].exibirInformacoes();
+        }
+
+        scan.close();
+
+    }
+    
+}
+
+import java.util.Scanner;
+
+public class Livros 
+{
+    private String titulo;
+    private String autor;
+    private int numeroPaginas;
+
+    public Livros() {}
+
+    public Livros(String titulo, String autor, int numeroPaginas) 
+    {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
+    }
+
+    //Método para entrada de dados
+    public void entrarDados(Scanner scan) 
+    {
+        System.out.print("Título: ");
+        this.titulo = scan.nextLine();
+
+        System.out.print("Autor: ");
+        this.autor = scan.nextLine();
+
+        System.out.print("Número de páginas: ");
+        this.numeroPaginas = Integer.parseInt(scan.nextLine()); // para evitar problema com nextInt
+    }
+
+    //Método para exibir as informações do livro
+    public void exibirInformacoes() 
+    {
+        System.out.println("Título do livro: " + this.titulo);
+        System.out.println("Autor: " + this.autor);
+        System.out.println("Número de páginas: " + this.numeroPaginas);
+    }
+}
