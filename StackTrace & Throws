@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int [] numeros = {4,8,16,32,64,128};
+		int [] denominador = {2,0,4,8,0};
+		
+		
+		for(int i =0; i <numeros.length; i++)
+		{
+		    try 
+		    {
+		    System.out.println(numeros[i]+"/"+denominador[i]+ " = "+ (numeros[i]/denominador[i]));		        
+			System.out.println();
+		    }
+		    
+            catch(Exception e)
+            {
+                System.out.println(e.getMessage());
+                e.printStackTrace();
+                		    
+    		    System.out.println();
+            }
+            
+		}
+	}	
+}
+
+import java.util.Scanner;
+
+public class UsandoThrows
+{
+	public static void main(String[] args)
+	{
+	    System.out.println("Entre com um decimal: ");
+	    
+	    try
+	    {
+	        double num = lerNumeros();
+	    	System.out.println("Você digitou: "+ num);
+	        System.out.println();
+	        
+	    }
+	   
+	    catch (Exception exc)
+	    {	    
+	        System.out.println("Entrada inválida");
+	        exc.printStackTrace();
+	    }
+	}
+    
+    
+    //Irá retornar uma exceção sem utilizar o try/catch
+    public static double lerNumeros() throws Exception
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        double num = scan.nextDouble();
+        return num;
+    }
+}
